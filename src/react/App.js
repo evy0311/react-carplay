@@ -4,6 +4,8 @@ import './App.css';
 import "@fontsource/montserrat";
 import JsmpegPlayer from "./JsmpegPlayer";
 
+import Dashboard from "./Dashboard";
+
 const {ipcRenderer} = window;
 
 
@@ -17,7 +19,7 @@ class App extends Component {
             mouseDown: false,
             lastX: 0,
             lastY: 0,
-            status: false
+            carplayStatus: false
         }
     }
 
@@ -29,10 +31,10 @@ class App extends Component {
         })
 
         ipcRenderer.on('plugged', () => {
-            this.setState({status: true})
+            this.setState({carplayStatus: true})
         })
         ipcRenderer.on('unplugged', () => {
-            this.setState({status: false})
+            this.setState({carplayStatus: false})
         })
         ipcRenderer.send('statusReq')
     }
@@ -126,14 +128,17 @@ class App extends Component {
                          }
                      }}
                      style={{height: '100%', width: '100%', padding: 0, margin: 0, display: 'flex'}}>
-                    {this.state.status ?
+                    
+                    <Dashboard></Dashboard>
+
+                    {/* {this.state.carplayStatus ?
                         <JsmpegPlayer
                             wrapperClassName={"video-wrapper"}
                             videoUrl={"ws://localhost:8082/supersecret"}
                             options={{
                                 autoplay: true
                             }}
-                        ></JsmpegPlayer> : <div style={{marginTop: 'auto', marginBottom: 'auto', textAlign: 'center', flexGrow: '1'}}>CONNECT IPHONE TO BEGIN CARPLAY</div>}
+                        ></JsmpegPlayer> : <div style={{marginTop: 'auto', marginBottom: 'auto', textAlign: 'center', flexGrow: '1'}}>CONNECT IPHONE TO BEGIN CARPLAY</div>} */}
                 </div>
             </div>
         );
