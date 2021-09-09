@@ -1,0 +1,23 @@
+.main {
+    position: relative;
+    width: 800px;
+    height: 480px;
+    background-color: black;
+    overflow: hidden;
+}
+
+.nav {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width:386.96px;
+    /* above is hardcoded for now */
+    height:50px;
+}
+
+/* Overrides bootstrap css */
+.btn{
+    border-radius: 0 !important;
+}
