@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 .main {
     position: relative;
     width: 800px;
@@ -7,14 +9,37 @@
 }
 
 .nav {
+
+}
+
+.bottomControls {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
     position: absolute;
     bottom: 0px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width:386.96px;
-    /* above is hardcoded for now */
-    height:50px;
+    left: 20px;
+    right: 20px;
+    margin: 0 auto; 
+
+    height: 50px; 
+    
+}
+
+.leftInfo {
+    float: left;
+}
+
+.centerInfo {
+    text-align: center;
+}
+
+.rightInfo {
+    float: right;
+}
+
+.bottomControls p {
+    display: inline;
 }
 
 /* Overrides bootstrap css */

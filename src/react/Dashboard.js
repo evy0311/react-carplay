@@ -21,10 +21,30 @@ export default function Dashboard() {
             <div className="nav">
                 <ButtonGroup aria-label="Basic example">
                     <Button variant="primary" size="lg">CarPlay</Button>{' '}
-                    <Button variant="secondary"size="lg">Radio</Button>{' '}
-                    <Button variant="secondary"size="lg">Climate</Button>{' '}
-                    <Button variant="secondary"size="lg">Settings</Button>
+                    <Button variant="secondary" size="lg">Radio</Button>{' '}
+                    <Button variant="secondary" size="lg">Climate</Button>{' '}
+                    <Button variant="secondary" size="lg">Settings</Button>
                 </ButtonGroup>
+            </div>
+
+            <div className="bottomControls">
+                <div className="leftInfo">
+                    <p>72 &#176;</p>
+                    <p>SEAT</p>
+                </div>
+
+                <div className="centerInfo">
+                    <p> CENTER INFO </p>
+                </div>
+
+                <div className="rightInfo">
+                    <p>SEAT</p>
+                    <p>71 &#176;</p>
+                </div>
+
+
+
+
             </div>
         </div>
     );
